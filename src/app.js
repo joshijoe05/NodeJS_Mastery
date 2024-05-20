@@ -27,4 +27,10 @@ app.use(express.static("public"));
 // when dealing with secure cookies
 app.use(cookieParser());
 
+
+// import routes
+import userRouter from "./routes/user.route.js"
+
+app.use("/api/v1/users", userRouter);
+
 export { app }
